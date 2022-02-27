@@ -3,7 +3,7 @@ class Memory:
         self.memory = [0] * 0x10000
 
     def __getitem__(self, address: int) -> int:
-        """Get memory byte value at 'item' address'"""
+        """Get specified memory value"""
         # check if address is integer
         assert isinstance(address, int), f"Wrong memory address type: {type(address)}"
         # check if address in range <0, 0xffff>
@@ -16,7 +16,7 @@ class Memory:
         return self.memory[address]
 
     def __setitem__(self, address: int, value: int) -> None:
-        """Set 'value' byte at memory address 'key'"""
+        """Set value byte at specified memory address"""
         # check if address is integer
         assert isinstance(address, int), f"Incorrect address type: {type(address)} [{address}]"
         # check if address is in proper range
