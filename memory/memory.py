@@ -20,7 +20,7 @@ class Memory:
         # check if address is integer
         assert isinstance(address, int), f"Incorrect address type: {type(address)} [{address}]"
         # check if address is in proper range
-        assert 0 <= address <= 0xffff, f"Wrong address: {hex(address)}"    # only integer values will be assigned to bytes
+        assert 0 <= address <= 0xffff, f"Wrong address: {hex(address)}"
         # check if new value is integer
         assert isinstance(value, int), f"Incorrect data type: {type(value)} [{value}]"
 
